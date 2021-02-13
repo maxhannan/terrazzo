@@ -1,0 +1,62 @@
+body{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+   
+    margin: 5.3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+    transition: 1s all;
+}
+.content.hide{
+    width: 0vw;
+}
+#imgBox{
+    height: 87vh;
+    width: 94vw;
+    background-image: url('./assets/hero4.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titleText{
+    color:white;
+    font-size: 10vh;
+}
+
+
+.navBar{
+    height: 6.35vh ;
+    width: 94vw;
+    position: absolute;
+    top: 0;
+    
+   
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.navlink{
+    margin-right: 3%;
+    font-size: 3vh;
+    color:black;
+    text-decoration:none
+}
+.navlink:hover{
+    color:gray;
+   
+}
+.navlink.active{
+    text-decoration: underline;
+}
