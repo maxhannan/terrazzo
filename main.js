@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/home.js":
-/*!*********************!*\
-  !*** ./src/home.js ***!
-  \*********************/
+/***/ "./src/NavBar.js":
+/*!***********************!*\
+  !*** ./src/NavBar.js ***!
+  \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"sayhello\": () => (/* binding */ sayhello)\n/* harmony export */ });\nconst sayhello = () =>{\n    console.log('hi');\n}\n\n\n\n//# sourceURL=webpack://terrazzo/./src/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"NavBar\": () => (/* binding */ NavBar)\n/* harmony export */ });\nconst NavBar = (()=>{\n    let nav = document.createElement('div');\n    nav.classList.add('navBar');\n    const home = document.createElement('a');\n     home.classList.add('navlink');\n     home.classList.add('active');\n     home.id = 'home'\n     home.href = '#'\n     home.innerHTML = 'home'\n    const menu = document.createElement('a');\n     menu.classList.add('navlink');\n     menu.id = 'menu'\n     menu.href = '#'\n     menu.innerHTML = 'menu'\n    const about = document.createElement('a');\n     about.classList.add('navlink');\n     about.id = 'about'\n     about.href = '#'\n     about.innerHTML = 'about'\n     nav.appendChild(home)\n     nav.appendChild(menu)\n     nav.appendChild(about)\n    document.body.appendChild(nav);\n\n    const toggleActive = (section)=>{\n        switch(section){\n            case 'menu':\n                menu.classList.add('active');\n                about.classList.remove('active');\n                home.classList.remove('active');\n                break;\n            case 'about':\n                menu.classList.remove('active');\n                about.classList.add('active');\n                home.classList.remove('active');\n                break;\n            case 'home':\n                menu.classList.remove('active');\n                about.classList.remove('active');\n                home.classList.add('active');\n                break;\n        }\n        \n    }\n    return{\n        toggleActive\n    }\n})();\n\n\n\n\n//# sourceURL=webpack://terrazzo/./src/NavBar.js?");
+
+/***/ }),
+
+/***/ "./src/heroConstructor.js":
+/*!********************************!*\
+  !*** ./src/heroConstructor.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"heroFactory\": () => (/* binding */ heroFactory)\n/* harmony export */ });\nconst heroFactory = (section,msg)=>{\n    const hero = document.createElement('div')\n    hero.id = 'imgBox'\n    hero.style.backgroundImage = `url('./assets/${section}.jpg')`\n    const titleText = document.createElement('div')\n    titleText.classList.add('titleText');\n    const textContent = document.createElement('h3');\n    textContent.innerHTML = msg\n    titleText.appendChild(textContent);\n    hero.appendChild(titleText);\n    return {\n        hero\n    }\n}\n\n\n//# sourceURL=webpack://terrazzo/./src/heroConstructor.js?");
 
 /***/ }),
 
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n\n\n(0,_home__WEBPACK_IMPORTED_MODULE_0__.sayhello)();\n\n//# sourceURL=webpack://terrazzo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _heroConstructor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./heroConstructor */ \"./src/heroConstructor.js\");\n/* harmony import */ var _NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar */ \"./src/NavBar.js\");\n\n\n\nconst content = document.querySelector('.content')\n\nfunction sleep(ms) {\n    return new Promise(resolve => setTimeout(resolve, ms));\n}\n  \nconst tabswitch = async(e) =>{\n    console.log(e.target.id)\n    _NavBar__WEBPACK_IMPORTED_MODULE_1__.NavBar.toggleActive(e.target.id)\n    content.classList.toggle('hide')\n    await sleep(1000);\n    content.innerHTML = ''\n    let hero = (0,_heroConstructor__WEBPACK_IMPORTED_MODULE_0__.heroFactory)(e.target.id, e.target.id).hero;\n    content.appendChild(hero)\n    content.classList.toggle('hide')\n    \n}\nconst pageLoad = (()=>{\n    const navlinks = document.querySelectorAll('.navlink');\n    navlinks.forEach(link => {\n        link.addEventListener('click', tabswitch)\n    })\n    let hero = (0,_heroConstructor__WEBPACK_IMPORTED_MODULE_0__.heroFactory)('home', 'Terrazzo').hero;\n    content.appendChild(hero)\n})();\n\n\n\n//# sourceURL=webpack://terrazzo/./src/index.js?");
 
 /***/ })
 
