@@ -1,6 +1,7 @@
 import { heroFactory } from './heroConstructor';
 import { menuFactory } from './menu';
 import {NavBar} from './NavBar'
+import '../node_modules/@fortawesome/fontawesome-free/js/all';
 
 const content = document.querySelector('.content')
 

@@ -7,7 +7,7 @@ const heroFactory = (section,msg)=>{
     const textContent = document.createElement('h3');
     textContent.innerHTML = `
     ${msg}
-    ${section === 'menu'? "<a id = 'openBtn' href ='#'><i class='fas fa-space-shuttle'></i></a>": ''}
+    ${section === 'menu'? "<a id = 'openBtn' href ='#'><i class='fas fa-arrow-right fa-xs'></i></a>": ''}
     `
     titleText.appendChild(textContent);
     hero.appendChild(titleText);
