@@ -15,8 +15,11 @@ body{
     overflow: hidden;
     transition: 1s all;
 }
+.content.close{
+    width: 0vw; 
+}
 .content.hide{
-    width: 0vw;
+    opacity: 0;
 }
 #imgBox{
     height: 87vh;
@@ -30,19 +33,34 @@ body{
     align-items: center;
     justify-content: center;
 }
+.menuBox{
+    background-color: blue;
+    width: 0px;
+    height:87vh;
+    transition: 1s all;
+}
+.menuBox.open{
+    width:1000px
+}
 .titleText{
     color:white;
     font-size: 10vh;
+    transition: 1s all;
 }
-
+#openBtn{
+    color:white;
+    text-decoration: none;
+}
+#openBtn:hover{
+    color:gray;
+    text-decoration: underline;
+}
 
 .navBar{
     height: 6.35vh ;
     width: 94vw;
-    position: absolute;
+    position: fixed;
     top: 0;
-    
-   
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -60,3 +78,11 @@ body{
 .navlink.active{
     text-decoration: underline;
 }
+@media only screen and (max-width: 1000px) {
+    .navBar{
+        justify-content: center;
+    }
+    .content{
+        flex-direction: column;
+    }
+  }
