@@ -99,7 +99,17 @@ h6{
     font-style:normal;
     margin: 0;
 }
+#map {
+    height: 87vh;
+    width: 94vw;
 
+  }
+  
+.aboutContainer{
+    height: 87vh;
+    width: 94vw;
+    background-color: red;
+}
 #openBtn{
     color:white;
     text-decoration: none;
