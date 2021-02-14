@@ -20,7 +20,7 @@ body{
     width: 0vw; 
 }
 .content.hide{
-    opacity: 1;
+    opacity: .2;
 }
 
 #imgBox{
@@ -174,10 +174,10 @@ body{
     }
     .menuImg{
         width: 400px;
-        width: 100vw;
+        width: 85vw;
         
     }
     #imgBoxMenu{
         height: 40vh;
-    }
+    };
   }
