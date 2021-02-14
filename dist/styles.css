@@ -4,7 +4,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('./assets/terrazzo.jpg');
 }
 .content{
     margin: 5.3vh;
@@ -77,11 +76,13 @@ body{
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    
    
 }
 .menuBox.open{
     opacity: 1;
     width:94vw;
+    
 }
 .menuImg{
     width: 600px;
@@ -91,34 +92,41 @@ h6{
     font-size: 4vw;
     margin-top: -50px;
     margin-left: 43vw;
+    color: white;
+    
 }
 .titleText{
     transition: 1s all;
     font-family: 'Chivo';
     font-weight: 300;
-    font-style:normal;
+    font-style:italic;
     margin: 0;
+    color: slateblue;
 }
 
 #map {
-    margin-top: 5vh;
+    margin-top: 7vh;
     height: 80vh;
-    width: 94vw;
+    width: 30vw;
 
   }
   
 .aboutContainer{
-    margin-top: 5vh;
+    margin-top: 7vh;
     height: 80vh;
-    width: 94vw;
-    background-color: red;
+    width: 70vw;
+    background-color: lightgray;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
 }
 #openBtn{
     color:white;
     text-decoration: none;
 }
 #openBtn:hover{
-    color:gray;
+    color: slateblue;
     text-decoration: underline;
 }
 
@@ -147,12 +155,31 @@ h6{
     color:black;
 }
 .navlink:hover{
-    color:gray;
+    color: slateblue;
+    
 }
 .navlink.active{
-    text-decoration: underline;
-}
 
+    color: slateblue;
+
+}
+h2{
+    font-family: 'Chivo';
+    font-weight: 700;
+    font-size: 5vw;
+    margin-bottom:0 ;
+    font-style: italic;
+    color: slateblue;
+    
+}
+b{
+    color: slateblue;
+}
+#para{
+    font-family: 'Chivo';
+    font-weight: 300;
+    font-size: 1.5vw;
+}
 
 @media only screen and (max-width: 1000px) {
     .navBar{
@@ -200,8 +227,36 @@ h6{
     #imgBoxMenu{
         height: 40vh;
     }
+
     h6{
         margin-top: 0px;
         margin-left:20vw;
+    }
+    #map {
+        margin-top: 7vh;
+        height: 32vh;
+        width:95vw;
+    
+      }
+      
+    .aboutContainer{
+        margin-top: 0px;
+        height: 100%;
+        width: 95vw;
+        background-color: lightgray;
+        text-align: center;
+    }
+    h2{
+        font-family: 'Chivo';
+        font-weight: 700;
+        font-size: 10vw;
+        margin-bottom:0 ;
+        font-style: italic;
+        
+    }
+    #para{
+        font-family: 'Chivo';
+        font-weight: 300;
+        font-size: 5vw;
     }
   }
