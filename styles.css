@@ -87,12 +87,17 @@ body{
     width: 600px;
     
 }
-
+h6{
+    font-size: 4vw;
+    margin-top: -50px;
+    margin-left: 43vw;
+}
 .titleText{
     transition: 1s all;
     font-family: 'Chivo';
     font-weight: 300;
     font-style:normal;
+    margin: 0;
 }
 
 #openBtn{
@@ -181,5 +186,9 @@ body{
     }
     #imgBoxMenu{
         height: 40vh;
-    };
+    }
+    h6{
+        margin-top: 0px;
+        margin-left:20vw;
+    }
   }
