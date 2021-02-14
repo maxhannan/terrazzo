@@ -21,7 +21,11 @@ body{
 .content.hide{
     opacity: .2;
 }
-
+h4{
+    margin: 0;
+    font-size:4vh;
+    font-family: 'Chivo'
+}
 #imgBox{
     color:white;
     height: 87vh;
@@ -157,7 +161,7 @@ h6{
 }
 .navlink{
     margin-right: 3%;
-    font-size: 3vh;
+    font-size: 2.5vh;
     text-decoration:none;
     color:white;
     transition: 1.5s all;
@@ -251,7 +255,8 @@ b{
         display: flex;
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.08);
-        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
     h2{
         font-family: 'Chivo';
