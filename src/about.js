@@ -8,12 +8,12 @@ const aboutFactory = (content) =>{
     let aboutContainer = document.createElement('div');
     aboutContainer.classList.add('aboutContainer');
     aboutContainer.innerHTML = `
-    <h2 id = 'aboutHead' >restaurant</h2>
+    <h2 id = 'aboutHead' >who are we?</h2>
+    <h4><b>202-555-0106</b><h4>
         <p id = 'para'>
         ***Terrazzo's committment to hospitality begins long before you sit down at our table. 
         We reopen Terrazzo in the same way that has guided us since opening our doors 17 years ago: 
-        with keen attention to detail, warmth and hospitality, and with the goal of making happy 
-        memories for our guests.
+        with keen attention to detail, warmth and hospitality.
         <br><br>
         Terrazzo is now taking reservations for February and beyond, beginning on Valentine's Day. 
         <br><br>
