@@ -21,8 +21,14 @@ const NavBar = (()=>{
      nav.appendChild(menu)
      nav.appendChild(about)
     document.body.appendChild(nav);
-
+    let currentpage = 'home'
+    const getcurrent = () =>{
+        return currentpage;
+    }
+    
     const toggleActive = (section)=>{
+        currentpage = section;
+        console.log({currentpage}, 'NAV');
         switch(section){
             case 'menu':
                 menu.classList.add('active');
@@ -43,7 +49,8 @@ const NavBar = (()=>{
         
     }
     return{
-        toggleActive
+        toggleActive,
+        getcurrent
     }
 })();
 
