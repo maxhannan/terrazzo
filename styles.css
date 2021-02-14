@@ -14,7 +14,7 @@ body{
     height: 100%;
     width: 100vw;
     overflow: hidden;
-    transition: .8s all;
+    transition: .6s all;
 }
 .content.close{
     width: 0vw; 
@@ -28,7 +28,8 @@ body{
     height: 87vh;
     width: 94vw;
     background-image: url('./assets/home.jpg');
-    font-size: 10vh;
+    font-size: 15vw;
+
     background-size:cover;
     background-position: center;
     background-repeat:no-repeat;
@@ -41,7 +42,7 @@ body{
     color:white;
     height: 87vh;
     width: 94vw;
-    font-size: 10vh;
+    font-size: 15vh;
     background-image: url('./assets/menu.jpg');
     background-size:cover;
     background-position: center;
@@ -71,7 +72,7 @@ body{
     opacity: 0;
     overflow-y: scroll;
     overflow-x: hidden;
-    transition: 1.5s all;
+    transition: .5s all;
     padding-bottom: 5%;
     display: flex;
     align-items: flex-start;
@@ -90,7 +91,7 @@ body{
 .titleText{
     transition: 1s all;
     font-family: 'Chivo';
-    font-weight: 700;
+    font-weight: 300;
     font-style:normal;
 }
 
