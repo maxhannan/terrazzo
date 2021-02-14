@@ -99,14 +99,17 @@ h6{
     font-style:normal;
     margin: 0;
 }
+
 #map {
-    height: 87vh;
+    margin-top: 5vh;
+    height: 80vh;
     width: 94vw;
 
   }
   
 .aboutContainer{
-    height: 87vh;
+    margin-top: 5vh;
+    height: 80vh;
     width: 94vw;
     background-color: red;
 }
