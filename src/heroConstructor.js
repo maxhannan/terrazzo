@@ -4,6 +4,7 @@ const heroFactory = (section)=>{
     switch(section){
         case 'menu':
             hero.id = 'imgBoxMenu'
+            hero.classList.add('imgBoxMenu');
             msg = '';
             break;
         case 'about':
@@ -18,13 +19,7 @@ const heroFactory = (section)=>{
     const titleText = document.createElement('div')
     titleText.classList.add('titleText');
     const textContent = document.createElement('h3');
-    textContent.innerHTML = `
-    ${msg}
-    ${section === 'menu'? `
-    <a id = 'openBtn' href ='#'>
-        <i class='fas fa-arrow-right fa-xs'></i>
-    </a>`: ''}
-    `
+    textContent.innerHTML = msg
     titleText.appendChild(textContent);
     hero.appendChild(titleText);
 

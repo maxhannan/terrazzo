@@ -55,7 +55,6 @@ const NavBar = (()=>{
                 break;
             case 'home':
                 nav.classList.remove('whiteBack')
-
                 menu.classList.remove('menupage')
                 about.classList.remove('menupage')
                 home.classList.remove('menupage')

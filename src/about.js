@@ -1,4 +1,5 @@
 import { Loader } from "@googlemaps/js-api-loader"
+
 const aboutFactory = (content) =>{
     let map = document.createElement('div');
     map.id = 'map'
@@ -22,9 +23,9 @@ const aboutFactory = (content) =>{
         Join us for our Chef's Tasting menus Tuesday to Saturday.<br><br>
         Seatings begin at 5:00pm and 7:30pm.</p>
     `
+    
+    
     content.appendChild(aboutContainer)
-    
-    
     
     
     //MAPS API
@@ -36,7 +37,7 @@ const aboutFactory = (content) =>{
         const myLatLng = { lat: 44.986520, lng: -93.258910};
         map = new google.maps.Map(document.getElementById("map"), {
           center: myLatLng,
-          zoom: 12,
+          zoom: 14,
           disableDefaultUI: true,
           styles : [
             {
@@ -218,6 +219,7 @@ const aboutFactory = (content) =>{
           });
       }); 
 }
+
 export{
     aboutFactory
 
