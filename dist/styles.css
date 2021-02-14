@@ -177,4 +177,7 @@ body{
         width: 94vw;
         
     }
+    #imgBoxMenu{
+        height: 40vh;
+    }
   }
