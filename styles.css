@@ -37,11 +37,12 @@ body{
     align-items: center;
     justify-content: center;
 }
-#imgBoxMenu{
+.imgBoxMenu{
     color:white;
     height: 87vh;
     width: 94vw;
     font-size: 15vh;
+    transition: 1s all;
     background-image: url('./assets/menu.jpg');
     background-size:cover;
     background-position: center;
@@ -51,6 +52,7 @@ body{
     align-items: center;
     justify-content: center;
 }
+
 #imgBoxAbout{
     color:black;
     height: 40vh;
@@ -96,14 +98,25 @@ h6{
     
 }
 .titleText{
-    transition: 1s all;
+    
     font-family: 'Chivo';
     font-weight: 300;
     font-style:italic;
     margin: 0;
     color: slateblue;
 }
-
+.titleTextArrow{
+    transition: 1s all;
+    position: absolute;
+    font-size: 5vh;
+    transform: rotate(180deg);
+ 
+    font-family: 'Chivo';
+    font-weight: 300;
+    font-style:italic;
+    margin: 0;
+    color: slateblue;
+}
 #map {
     margin-top: 7vh;
     height: 80vh;
@@ -115,14 +128,16 @@ h6{
     margin-top: 7vh;
     height: 80vh;
     width: 70vw;
-    background-color: lightgray;
+    background-color: rgba(0, 0, 0, 0.08);
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
     overflow-wrap: break-word;
+    overflow-y: scroll;
 }
 #openBtn{
-    color:white;
+    color:rgba(0, 0, 0, 0.8);
+    opacity: 1;
     text-decoration: none;
 }
 #openBtn:hover{
@@ -214,7 +229,8 @@ b{
         background-color:white ;
         top:0px;
         height: 10vh;
-        width: 100vw
+        width: 100vw;
+        justify-content: space-around;
     }
     .navlink{
         color:black;
@@ -241,9 +257,12 @@ b{
       
     .aboutContainer{
         margin-top: 0px;
+        padding: 5%;
         height: 100%;
         width: 95vw;
-        background-color: lightgray;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.08);
         text-align: center;
     }
     h2{
@@ -257,6 +276,6 @@ b{
     #para{
         font-family: 'Chivo';
         font-weight: 300;
-        font-size: 5vw;
+        font-size: 4vw;
     }
   }
