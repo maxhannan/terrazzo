@@ -12,7 +12,7 @@ const heroFactory = (section)=>{
             break;
         case 'home':
             hero.id = 'imgBox'
-            msg = 'terrazzo'
+            msg = 'terrazzo<br><h6>modern italian</h6>'
             break;
     }
     const titleText = document.createElement('div')
