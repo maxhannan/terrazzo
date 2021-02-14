@@ -10,7 +10,6 @@ const content = document.querySelector('.content')
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-  
 const tabswitch = async(e) =>{
     let target = e.target.id;
     let current = NavBar.getcurrent();
@@ -20,12 +19,10 @@ const tabswitch = async(e) =>{
     if(target === current){
         return;
     }
-
-    
     content.classList.toggle('hide')
     await sleep(200);
     content.classList.toggle('close')
-    await sleep(1000);
+    await sleep(700);
     content.innerHTML = ''
     if(target === 'menu'){
         menuFactory(content);
@@ -38,8 +35,6 @@ const tabswitch = async(e) =>{
     content.classList.toggle('close')
     await sleep(200);
     content.classList.toggle('hide')
-    
-    
 }
 pageLoad(content);
 
