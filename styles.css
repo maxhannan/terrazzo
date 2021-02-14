@@ -84,7 +84,7 @@ body{
 }
 .menuImg{
     width: 600px;
-    transition: 2s all;
+    
 }
 
 .titleText{
@@ -171,5 +171,10 @@ body{
     }
     .navlink{
         color:black;
+    }
+    .menuImg{
+        width: 400px;
+        width: 94vw;
+        
     }
   }
