@@ -1,8 +1,8 @@
 import {sleep} from './index'
 const NavBar = (()=>{
-
     let nav = document.createElement('div');
     nav.classList.add('navBar');
+    
     const home = document.createElement('a');
      home.classList.add('navlink');
      home.classList.add('active');
@@ -23,6 +23,8 @@ const NavBar = (()=>{
      nav.appendChild(menu)
      nav.appendChild(about)
     document.body.appendChild(nav);
+    
+    
     let currentpage = 'home'
     const getcurrent = () =>{
         return currentpage;
@@ -43,7 +45,6 @@ const NavBar = (()=>{
                 nav.classList.add('whiteBack')
                 break;
             case 'about':
-                
                 menu.classList.add('menupage')
                 about.classList.add('menupage')
                 home.classList.add('menupage')

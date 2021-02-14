@@ -31,13 +31,9 @@ const menuFactory =(content)=>{
 
 let i;
 let menuStat
-const slideshowStart = () =>{
-    menuStat = true;
+const slideshowtog = () =>{
+    menuStat = !menuStat;
     slideshow();
-}
-const slideshowStop = () =>{
-    menuStat = false;
-    
 }
 const slideshow = async function(){
     if(menuStat){
@@ -70,6 +66,5 @@ const slideshow = async function(){
 
 export{
     menuFactory,
-    slideshowStart,
-    slideshowStop
+    slideshowtog
 }

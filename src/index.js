@@ -1,4 +1,4 @@
-import { menuFactory, slideshowStart,slideshowStop } from './menu';
+import { menuFactory, slideshowtog } from './menu';
 import {aboutFactory} from './about'
 import {NavBar} from './NavBar'
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
@@ -20,7 +20,7 @@ const tabswitch = async(e) =>{
         return;
     }
     if(current === 'menu'){
-        slideshowStop();
+        slideshowtog();
     }
     content.classList.toggle('hide')
     await sleep(200);
@@ -31,7 +31,7 @@ const tabswitch = async(e) =>{
     switch(target){
         case 'menu':
             menuFactory(content);
-            slideshowStart();
+            slideshowtog();
             break;
         case 'home':
             homeFactory(content)
@@ -43,15 +43,9 @@ const tabswitch = async(e) =>{
     content.classList.toggle('close')
     await sleep(200);
     content.classList.toggle('hide')
-    await sleep(400);
-    
-
-        
-       
+    await sleep(400);    
 }
     
-
-
 //initial page load
 pageLoad(content);
 
