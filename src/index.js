@@ -1,7 +1,9 @@
 import { heroFactory } from './heroConstructor';
 import { menuFactory } from './menu';
+import {aboutFactory} from './about'
 import {NavBar} from './NavBar'
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
+import { pageLoad } from './home';
 
 const content = document.querySelector('.content')
 
@@ -27,9 +29,11 @@ const tabswitch = async(e) =>{
     content.innerHTML = ''
     if(target === 'menu'){
         menuFactory(content);
-    }else{
-        let hero = heroFactory('home', 'Terrazzo').hero;
+    }else if(target === 'home'){
+        let hero = heroFactory('home').hero;
         content.appendChild(hero) 
+    }else{
+        aboutFactory(content);
     }
     content.classList.toggle('close')
     await sleep(200);
@@ -37,12 +41,9 @@ const tabswitch = async(e) =>{
     
     
 }
-const pageLoad = (()=>{
-    const navlinks = document.querySelectorAll('.navlink');
-    navlinks.forEach(link => {
-        link.addEventListener('click', tabswitch)
-    })
-    let hero = heroFactory('home', 'Terrazzo').hero;
-    content.appendChild(hero)
-})();
+pageLoad(content);
 
+export{
+    sleep,
+    tabswitch
+}

@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display+SC:700i&display=swap');
+
 body{
-    
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('./assets/terrazzo.jpg');
 }
 .content{
-   
     margin: 5.3vh;
     display: flex;
     align-items: center;
@@ -13,18 +14,21 @@ body{
     height: 100%;
     width: 100vw;
     overflow: hidden;
-    transition: 1s all;
+    transition: .8s all;
 }
 .content.close{
     width: 0vw; 
 }
 .content.hide{
-    opacity: 0;
+    opacity: 1;
 }
+
 #imgBox{
+    color:white;
     height: 87vh;
     width: 94vw;
-    background-image: url('./assets/hero4.jpg');
+    background-image: url('./assets/home.jpg');
+    font-size: 10vh;
     background-size:cover;
     background-position: center;
     background-repeat:no-repeat;
@@ -33,20 +37,63 @@ body{
     align-items: center;
     justify-content: center;
 }
+#imgBoxMenu{
+    color:white;
+    height: 87vh;
+    width: 94vw;
+    font-size: 10vh;
+    background-image: url('./assets/menu.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#imgBoxAbout{
+    color:black;
+    height: 40vh;
+    width: 100vw;
+    font-size: 10vh;
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    overflow: hidden;
+    padding-top: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .menuBox{
-    background-color: blue;
     width: 0px;
-    height:87vh;
-    transition: 1s all;
+    height:60vh;
+    opacity: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: 1.5s all;
+    padding-bottom: 5%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+   
 }
 .menuBox.open{
-    width:1000px
+    opacity: 1;
+    width:94vw;
 }
+.menuImg{
+    width: 600px;
+    transition: 2s all;
+}
+
 .titleText{
-    color:white;
-    font-size: 10vh;
     transition: 1s all;
+    font-family: 'Playfair Display SC';
+    font-weight: 700;
+    font-style:normal;
 }
+
 #openBtn{
     color:white;
     text-decoration: none;
@@ -57,32 +104,72 @@ body{
 }
 
 .navBar{
-    height: 6.35vh ;
+    height: 8vh ;
     width: 94vw;
     position: fixed;
-    top: 0;
+    top: 5.3vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    font-family: 'Chivo';
+    font-weight: 300;
+}
+.navBar.whiteBack{
+    background-color: white;
 }
 .navlink{
     margin-right: 3%;
     font-size: 3vh;
+    text-decoration:none;
+    color:white;
+    transition: 1.5s all;
+}
+.navlink.menupage{
     color:black;
-    text-decoration:none
 }
 .navlink:hover{
     color:gray;
-   
 }
 .navlink.active{
     text-decoration: underline;
 }
+
+
 @media only screen and (max-width: 1000px) {
     .navBar{
         justify-content: center;
     }
     .content{
         flex-direction: column;
+    }
+    .menuBox{
+        opacity: 1;
+        width:94vw;
+        height: 100%;
+    }
+    .content{
+        margin:0; 
+        margin-top: 3%;
+    }
+    #openBtn{
+    
+        display: none;
+    }
+    #menuImg{
+        width: 94vw;
+    }
+    #imgBox{
+        height:93vh;
+    }
+    #imgBoxMenu{
+        height:60vh;
+    }
+    .navBar{
+        background-color:white ;
+        top:0px;
+        height: 10vh;
+    }
+    .navlink{
+        color:black;
     }
   }

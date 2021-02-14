@@ -1,4 +1,6 @@
+import {sleep} from './index'
 const NavBar = (()=>{
+
     let nav = document.createElement('div');
     nav.classList.add('navBar');
     const home = document.createElement('a');
@@ -26,21 +28,37 @@ const NavBar = (()=>{
         return currentpage;
     }
     
-    const toggleActive = (section)=>{
+    const toggleActive = async(section)=>{
         currentpage = section;
         console.log({currentpage}, 'NAV');
         switch(section){
             case 'menu':
-                menu.classList.add('active');
+                menu.classList.add('menupage')
+                about.classList.add('menupage')
+                home.classList.add('menupage')
                 about.classList.remove('active');
+                menu.classList.add('active');
                 home.classList.remove('active');
+                await sleep(1500);
+                nav.classList.add('whiteBack')
                 break;
             case 'about':
+                
+                menu.classList.add('menupage')
+                about.classList.add('menupage')
+                home.classList.add('menupage')
                 menu.classList.remove('active');
                 about.classList.add('active');
                 home.classList.remove('active');
+                await sleep(1500);
+                nav.classList.add('whiteBack')
                 break;
             case 'home':
+                nav.classList.remove('whiteBack')
+
+                menu.classList.remove('menupage')
+                about.classList.remove('menupage')
+                home.classList.remove('menupage')
                 menu.classList.remove('active');
                 about.classList.remove('active');
                 home.classList.add('active');

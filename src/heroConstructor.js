@@ -1,13 +1,29 @@
-const heroFactory = (section,msg)=>{
+const heroFactory = (section)=>{
     const hero = document.createElement('div')
-    hero.id = 'imgBox'
-    hero.style.backgroundImage = `url('./assets/${section}.jpg')`
+    let msg
+    switch(section){
+        case 'menu':
+            hero.id = 'imgBoxMenu'
+            msg = '';
+            break;
+        case 'about':
+            hero.id = 'imgBoxAbout'
+            msg = 'about'
+            break;
+        case 'home':
+            hero.id = 'imgBox'
+            msg = 'terrazzo'
+            break;
+    }
     const titleText = document.createElement('div')
     titleText.classList.add('titleText');
     const textContent = document.createElement('h3');
     textContent.innerHTML = `
     ${msg}
-    ${section === 'menu'? "<a id = 'openBtn' href ='#'><i class='fas fa-arrow-right fa-xs'></i></a>": ''}
+    ${section === 'menu'? `
+    <a id = 'openBtn' href ='#'>
+        <i class='fas fa-arrow-right fa-xs'></i>
+    </a>`: ''}
     `
     titleText.appendChild(textContent);
     hero.appendChild(titleText);
